@@ -1,2 +1,1 @@
-#Nex Credential Manager v1.0.0
 Nex Credential Manager v1.0.0 – A secure and user-friendly tool to store, organize, and manage all your passwords and credentials in one place. Protect your sensitive data with strong encryption and access it effortlessly whenever needed.
