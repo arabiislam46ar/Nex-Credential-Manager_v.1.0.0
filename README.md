@@ -1,2 +1,1 @@
-# Nex-Credential-Manager_v.3.3.2
-Nex Credential Manager v3.3.2 is a modern, secure, and offline-first application designed to help users safely organize and store digital credentials, such as passwords and API keys. In an era of frequent data breaches, this application offers a centralized solution that prioritizes privacy by strictly avoiding cloud storage.
+Nex Credential Manager v1.0.0 – A secure and user-friendly tool to store, organize, and manage all your passwords and credentials in one place. Protect your sensitive data with strong encryption and access it effortlessly whenever needed.
