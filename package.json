@@ -1,0 +1,63 @@
+{
+  "name": "nex-credentials-manager",
+  "version": "1.0.0",
+  "description": "Secure Desktop Credentials Manager with AES-256 encryption",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "clean": "node -e \"const fs = require('fs'); const path = require('path'); const distPath = path.join(__dirname, 'dist'); if (fs.existsSync(distPath)) { fs.rmSync(distPath, { recursive: true, force: true }); console.log('dist folder cleaned'); }\"",
+    "prebuild": "npm run clean",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": [
+    "password-manager",
+    "credentials",
+    "security",
+    "encryption"
+  ],
+  "author": "NexApp",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  },
+  "build": {
+    "appId": "com.nexapp.credentials",
+    "productName": "Nex Credentials Manager",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "styles/**/*",
+      "scripts/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/icon.png",
+      "signingHashAlgorithms": ["sha256"],
+      "sign": null
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "src/assets/icon.png",
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "src/assets/icon.png",
+      "category": "Utility"
+    }
+  }
+}
